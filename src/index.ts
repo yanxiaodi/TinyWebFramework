@@ -21,8 +21,16 @@
 // user.trigger('change');
 
 import axios from 'axios';
+import { User } from './models/User';
 
-axios.post('http://localhost:3000/users', {
-  name: 'myname',
-  age: 20,
-});
+// axios.post('http://localhost:3000/users', {
+//   name: 'myname',
+//   age: 20,
+// });
+
+// const user = new User({ id: 1 });
+
+// user.set({ name: 'NEW NAME', age: 50 });
+
+const user = new User({ name: 'Jason', age: 40 });
+user.save();
