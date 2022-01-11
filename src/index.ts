@@ -20,7 +20,6 @@
 // console.log(user);
 // user.trigger('change');
 
-import axios from 'axios';
 import { User } from './models/User';
 
 // axios.post('http://localhost:3000/users', {
@@ -32,5 +31,5 @@ import { User } from './models/User';
 
 // user.set({ name: 'NEW NAME', age: 50 });
 
-const user = new User({ name: 'Jason', age: 40 });
-user.save();
+// const user = new User({ name: 'Jason', age: 40 });
+// user.save();
