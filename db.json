@@ -1,28 +1,29 @@
 {
-    "users": [{
-            "id": 1,
-            "name": "newer name",
-            "age": 100
-        },
-        {
-            "name": "Jim",
-            "age": 20,
-            "id": 2
-        },
-        {
-            "name": "Tom",
-            "age": 20,
-            "id": 3
-        },
-        {
-            "name": "Jacky",
-            "age": 40,
-            "id": 4
-        },
-        {
-            "name": "Jason",
-            "age": 40,
-            "id": 5
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "newer name",
+      "age": 100
+    },
+    {
+      "name": "Jim",
+      "age": 20,
+      "id": 2
+    },
+    {
+      "name": "Tom",
+      "age": 20,
+      "id": 3
+    },
+    {
+      "name": "Jacky",
+      "age": 40,
+      "id": 4
+    },
+    {
+      "name": "Jason",
+      "age": 40,
+      "id": 5
+    }
+  ]
 }
