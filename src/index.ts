@@ -27,19 +27,21 @@ import { User } from './models/User';
 //   age: 20,
 // });
 
-const user = new User({ id: 1 });
+//const user = new User({ id: 1 });
 
 // user.set({ name: 'NEW NAME', age: 50 });
 
 //const user = new User({ name: 'Jason', age: 40 });
-
-console.log(user.get('name'));
+const user = new User({ id: 1, name: 'newer name', age: 100 });
+//console.log(user.get('name'));
 // user.save();
 
-user.on('change', () => {
+user.on('save', () => {
   console.log(user);
 });
 
 //user.set({ name: 'New Name' });
 
-user.fetch();
+//user.fetch();
+
+user.save();
