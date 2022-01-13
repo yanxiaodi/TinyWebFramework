@@ -6,6 +6,7 @@ export class Collection<T, K> {
   events: Eventing = new Eventing();
 
   constructor(public rootUrl: string, public deserialize: (json: K) => T) {}
+
   get on() {
     return this.events.on;
   }
@@ -14,12 +15,12 @@ export class Collection<T, K> {
     return this.events.trigger;
   }
 
-  fetch() {
+  fetch(): void {
     axios.get(this.rootUrl).then((response: AxiosResponse) => {
       response.data.forEach((value: K) => {
-        this.models = [];
         this.models.push(this.deserialize(value));
       });
+
       this.trigger('change');
     });
   }

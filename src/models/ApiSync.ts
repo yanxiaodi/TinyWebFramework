@@ -1,6 +1,6 @@
 import axios, { AxiosPromise } from 'axios';
 
-export interface HasId {
+interface HasId {
   id?: number;
 }
 
@@ -13,10 +13,11 @@ export class ApiSync<T extends HasId> {
 
   save(data: T): AxiosPromise {
     const { id } = data;
+
     if (id) {
       return axios.put(`${this.rootUrl}/${id}`, data);
     } else {
-      return axios.post(`${this.rootUrl}/`, data);
+      return axios.post(this.rootUrl, data);
     }
   }
 }

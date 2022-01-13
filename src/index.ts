@@ -48,7 +48,7 @@ import { User, UserProps } from './models/User';
 
 // user.save();
 
-const collection = User.buildCollection();
+const collection = User.buildUserCollection();
 collection.on('çhange', () => {
   console.log(collection);
 });
