@@ -20,7 +20,8 @@
 // console.log(user);
 // user.trigger('change');
 
-import { User } from './models/User';
+import { Collection } from './models/Collection';
+import { User, UserProps } from './models/User';
 
 // axios.post('http://localhost:3000/users', {
 //   name: 'myname',
@@ -32,16 +33,23 @@ import { User } from './models/User';
 // user.set({ name: 'NEW NAME', age: 50 });
 
 //const user = new User({ name: 'Jason', age: 40 });
-const user = new User({ id: 1, name: 'newer name', age: 100 });
+// const user = User.buildUser({ id: 1 });
 //console.log(user.get('name'));
 // user.save();
-
-user.on('save', () => {
-  console.log(user);
-});
-
 //user.set({ name: 'New Name' });
 
-//user.fetch();
+// const user = User.buildUser({ id: 1 });
 
-user.save();
+// user.on('save', () => {
+//   console.log(user);
+// });
+
+// user.fetch();
+
+// user.save();
+
+const collection = User.buildCollection();
+collection.on('çhange', () => {
+  console.log(collection);
+});
+collection.fetch();
