@@ -49,7 +49,7 @@ import { User, UserProps } from './models/User';
 // user.save();
 
 const collection = User.buildUserCollection();
-collection.on('çhange', () => {
+collection.on('change', () => {
   console.log(collection);
 });
 collection.fetch();
