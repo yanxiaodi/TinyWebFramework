@@ -8,9 +8,10 @@ export class UserForm {
       'click:.set-age': this.onSetAgeClick,
     };
   }
-  onSetAgeClick(): void {
+  onSetAgeClick = (): void => {
     console.log('Hi there');
-  }
+    this.model.setRandomAge();
+  };
 
   template(): string {
     return `
